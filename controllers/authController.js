@@ -1,6 +1,8 @@
 const User = require("../models/User");
 const jwt = require('jsonwebtoken');
 
+const config = require('../config');
+
 // handle errors
 const handleErrors = (err) => {
     console.log(err.message, err.code);
@@ -38,7 +40,7 @@ const handleErrors = (err) => {
 // create json web token
 const maxAge = 3 * 24 * 60 * 60;
 const createToken = (id) => {
-    return jwt.sign({ id }, 'net ninja secret', {
+    return jwt.sign({ id }, config.secret, {
         expiresIn: maxAge
     });
 };
