@@ -126,7 +126,7 @@ header .btn{
     background: white;
     position: relative;
     text-align: center;
-    padding: 0 20px 30px 20px
+    padding: 30px 20px 30px 20px;
 }
 .recipe img{
     width: 100px;

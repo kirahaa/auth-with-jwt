@@ -27,4 +27,5 @@ db.once('open', ()=>{
 // routes
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
+app.get('/detail', requireAuth, (req, res) => res.render('detail'));
 app.use(authRoutes);
